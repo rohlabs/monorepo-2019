@@ -1,0 +1,21 @@
+{
+  "name": "monorepo",
+  "private": true,
+  "scripts": {
+    "clean": "lerna clean",
+    "bootstrap": "lerna bootstrap",
+    "test": "CI=true lerna run test --stream",
+    "start": "lerna run --parallel start",
+    "prepare": "rimraf packages/**/build && lerna run prepare",
+    "build": "npm run prepare && lerna run --parallel build"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@types/node": "^10.11.4",
+    "lerna": "^3.4.1",
+    "rimraf": "^2.6.2",
+    "typescript": "^3.1.1"
+  }
+}
