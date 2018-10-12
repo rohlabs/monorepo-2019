@@ -1,5 +1,9 @@
 {
   "compilerOptions": {
+    "lib": [
+      "es2015",
+      "esnext.asynciterable"
+    ],
     "allowUnreachableCode": false,
     "noFallthroughCasesInSwitch": true,
     "allowSyntheticDefaultImports": true,
@@ -11,9 +15,11 @@
     "noUnusedLocals": true,
     "sourceMap": true,
     "strictNullChecks": true,
-    "strict": true,
     "pretty": true,
-    "jsx": "react",
     "suppressImplicitAnyIndexErrors": true
-  }
+  },
+  "exclude": [
+    "node_modules",
+    "build"
+  ]
 }
