@@ -1,7 +1,0 @@
-{
-    "watch": ["dist/**/*.js"],
-    "execMap": {
-      "js": "tscpaths -p tsconfig.json -s ./src -o ./dist/src"
-    }
-  }
-  

@@ -1,5 +1,7 @@
 .idea/
 .vscode/
+.cache
+.docz
 node_modules/
 build/
 tmp/
