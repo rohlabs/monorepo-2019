@@ -1,6 +1,6 @@
 {
   "private": true,
-  "repository": "https://github.com/rohmanhm/metsnip.git",
+  "repository": "https://github.com/rohmanhm/monorepo.git",
   "author": "MH Rohman Masyhar <mhrohman@live.com>",
   "workspaces": {
     "packages": [

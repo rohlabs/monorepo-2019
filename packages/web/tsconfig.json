@@ -17,9 +17,16 @@
     "composite": true,
     "strict": true,
     "noImplicitAny": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./*"],
+      "@/*": ["./src/*"],
+      "components/*": ["./src/components/*"],
+      "modules/*": ["./src/modules/*"]
+    }
   },
-  "references": [{ "path": "../core" }, { "path": "../ui" }],
+  "references": [{ "path": "../common" }, { "path": "../ui" }],
   "include": ["**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules", "next.config.js"]
 }
