@@ -1,11 +1,12 @@
 .idea/
-.vscode/
 .cache
 .docz
 node_modules/
 build/
+bundles/
+.cache/
 tmp/
 temp/
-dist
+dist/
 .next
 .env
