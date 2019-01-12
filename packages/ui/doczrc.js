@@ -1,4 +1,4 @@
 module.exports = {
-  title: 'Metsnip UI',
+  title: 'Monorepo UI',
   typescript: true
 }

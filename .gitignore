@@ -1,4 +1,7 @@
+# editor
 .idea/
+
+# package ignore
 .cache
 .docz
 node_modules/
@@ -10,3 +13,4 @@ temp/
 dist/
 .next
 .env
+*.log

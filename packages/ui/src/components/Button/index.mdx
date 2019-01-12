@@ -34,30 +34,34 @@ Buttons make common actions more obvious and help users more easily perform them
 ## With different colors
 
 <Playground>
-  <Button kind="primary">Click me</Button>
-  <Button kind="secondary">Click me</Button>
-  <Button kind="cancel">Click me</Button>
-  <Button kind="dark">Click me</Button>
-  <Button kind="gray">Click me</Button>
+  <Button variant="primary">Click me</Button>
+  <Button variant="secondary">Click me</Button>
+  <Button variant="success">Click me</Button>
+  <Button variant="cancel">Click me</Button>
+  <Button variant="dark">Click me</Button>
+  <Button variant="gray">Click me</Button>
 </Playground>
 
 ## Outlined
 
 <Playground>
-  <Button kind="primary" outline>
+  <Button variant="primary" outline={true}>
     Click me
   </Button>
-  <Button kind="secondary" outline>
+  <Button variant="secondary" outline={true}>
     Click me
   </Button>
-  <Button kind="cancel" outline>
+  <Button variant="success" outline={true}>
     Click me
   </Button>
-  <Button kind="dark" outline>
+  <Button variant="cancel" outline={true}>
     Click me
   </Button>
-  <Button kind="gray" outline>
+  <Button variant="dark" outline={true}>
     Click me
+  </Button>
+  <Button variant="gray" outline={true} borderRadius={100} bg="magenta">
+    Klik aku bang
   </Button>
 </Playground>
 

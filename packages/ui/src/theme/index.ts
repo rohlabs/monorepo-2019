@@ -1,2 +1,4 @@
-export * from './constants'
-export * from './globalStyles'
+import { Constants } from './constants'
+
+export type Theme = typeof Constants
+export default Constants

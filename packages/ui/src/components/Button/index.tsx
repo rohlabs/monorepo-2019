@@ -1,9 +1,32 @@
 import * as React from 'react'
-import { Button as RebassButton } from 'rebass'
-import Styled from 'styled-components'
+import styled, { ThemeProps } from 'styled-components'
+import { space, SpaceProps } from 'styled-system'
+import theme, { Theme } from '../../theme'
 
-interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
+export interface ButtonProps extends SpaceProps<number> {
+  theme?: Theme
+}
+type ButtonStyledProps = ButtonProps & ThemeProps<Theme>
+const ButtonStyled = styled.button`
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+  font-family: inherit;
+  border-width: 0;
+  border-style: solid;
+  background: ${(props: ButtonStyledProps) => props.theme.colors.success};
+  padding: 8px 10px;
+  border-radius: 3px;
+  color: #fff;
 
-const StyledButton = Styled(RebassButton)``
+  ${space};
+`
+export const Button: React.SFC<ButtonProps> = ({ children, ...props }) => {
+  return <ButtonStyled {...props}>{children}</ButtonStyled>
+}
 
-export const Button = (props: Props) => <StyledButton {...props} />
+Button.defaultProps = {
+  theme: theme
+}

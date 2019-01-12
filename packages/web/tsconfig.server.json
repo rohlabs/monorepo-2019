@@ -5,5 +5,5 @@
     "outDir": ".next/production-server/",
     "allowSyntheticDefaultImports": false
   },
-  "include": ["server/**/*.ts"]
+  "include": ["server/**/*.ts", "**/*.d.ts"]
 }
