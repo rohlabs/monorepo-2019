@@ -1,11 +1,7 @@
+const { PHASE_PRODUCTION_BUILD } = require('next/constants')
+const { withPlugins, optional } = require('next-compose-plugins')
 const withTypescript = require('@zeit/next-typescript')
-const withBundleAnalyzer = require('@zeit/next-bundle-analyzer')
-const {
-  PHASE_DEVELOPMENT_SERVER,
-  PHASE_PRODUCTION_BUILD
-} = require('next/constants')
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
-const withPlugins = require('next-compose-plugins')
 
 module.exports = withPlugins([
   [
@@ -13,15 +9,16 @@ module.exports = withPlugins([
     {
       webpack(config, options) {
         // Do not run type checking twice:
-        if (options.isServer)
+        if (options.isServer) {
           config.plugins.push(new ForkTsCheckerWebpackPlugin())
+        }
 
         return config
       }
     }
   ],
   [
-    withBundleAnalyzer,
+    optional(() => require('@zeit/next-bundle-analyzer')),
     {
       analyzeServer: ['server', 'both'].includes(process.env.BUNDLE_ANALYZE),
       analyzeBrowser: ['browser', 'both'].includes(process.env.BUNDLE_ANALYZE),
@@ -35,6 +32,13 @@ module.exports = withPlugins([
           reportFilename: '../bundles/client.html'
         }
       }
+    },
+    [PHASE_PRODUCTION_BUILD]
+  ],
+  [
+    optional(() => require('./plugins/next-bundle-size-analyzer')),
+    {
+      outputDir: '../stats.txt'
     },
     [PHASE_PRODUCTION_BUILD]
   ]

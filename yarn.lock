@@ -5397,6 +5397,10 @@ humanize-string@^1.0.2:
   dependencies:
     decamelize "^1.0.0"
 
+humanize@0.0.9:
+  version "0.0.9"
+  resolved "https://registry.yarnpkg.com/humanize/-/humanize-0.0.9.tgz#1994ffaecdfe9c441ed2bdac7452b7bb4c9e41a4"
+
 iconv-lite@0.4.23:
   version "0.4.23"
   resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.23.tgz#297871f63be507adcfbfca715d0cd0eed84e9a63"
@@ -10312,6 +10316,14 @@ webpack-bundle-analyzer@^3.0.3:
     mkdirp "^0.5.1"
     opener "^1.5.1"
     ws "^6.0.0"
+
+webpack-bundle-size-analyzer@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/webpack-bundle-size-analyzer/-/webpack-bundle-size-analyzer-3.0.0.tgz#c0657e9787cf644a0b91d891ae15553ba61bbc71"
+  dependencies:
+    commander "^2.19.0"
+    filesize "^3.6.1"
+    humanize "0.0.9"
 
 webpack-chain@^5.0.1:
   version "5.0.1"
