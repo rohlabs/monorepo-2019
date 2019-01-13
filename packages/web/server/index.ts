@@ -1,6 +1,6 @@
-import * as next from 'next'
+import next from 'next'
 import { createServer } from 'http'
-import * as getPort from 'get-port'
+import getPort from 'get-port'
 
 import { routes } from './routes'
 

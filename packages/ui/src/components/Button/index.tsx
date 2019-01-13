@@ -3,7 +3,9 @@ import styled, { ThemeProps } from 'styled-components'
 import { space, SpaceProps } from 'styled-system'
 import theme, { Theme } from '../../theme'
 
-export interface ButtonProps extends SpaceProps<number> {
+export interface ButtonProps
+  extends SpaceProps<number>,
+    React.HTMLAttributes<HTMLButtonElement> {
   theme?: Theme
 }
 type ButtonStyledProps = ButtonProps & ThemeProps<Theme>
@@ -30,3 +32,5 @@ export const Button: React.SFC<ButtonProps> = ({ children, ...props }) => {
 Button.defaultProps = {
   theme: theme
 }
+
+Button.displayName = 'Button'

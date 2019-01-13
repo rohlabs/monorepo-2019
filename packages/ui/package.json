@@ -14,6 +14,7 @@
     "build": "docz build"
   },
   "dependencies": {
+    "@types/styled-system": "^3.1.0",
     "docz": "^0.13.7",
     "docz-core": "^0.13.7",
     "react": "^16.7.0",
