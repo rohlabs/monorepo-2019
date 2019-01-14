@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@monorepo/ui": "1.0.0",
-    "@yolkai/next-routes": "^1.4.6",
+    "@yolkai/next-routes": "^2.0.0",
     "get-port": "^4.1.0",
     "mobx": "^5.8.0",
     "mobx-react": "^5.4.3",

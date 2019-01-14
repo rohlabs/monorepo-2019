@@ -1948,9 +1948,9 @@
   version "4.2.1"
   resolved "https://registry.yarnpkg.com/@xtuc/long/-/long-4.2.1.tgz#5c85d662f76fa1d34575766c5dcd6615abcd30d8"
 
-"@yolkai/next-routes@^1.4.6":
-  version "1.4.6"
-  resolved "https://registry.yarnpkg.com/@yolkai/next-routes/-/next-routes-1.4.6.tgz#fd355613d4ea1dfc0259e93b6c50ed9bc0c144f6"
+"@yolkai/next-routes@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@yolkai/next-routes/-/next-routes-2.0.0.tgz#7017bce580863908b2b5b7d92eaf9e94d450d8f4"
   dependencies:
     path-to-regexp "^2.1.0"
 
